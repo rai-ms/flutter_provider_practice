@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider/services/text/apptext.dart';
+import 'package:flutter_provider/services/utils/route_name.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/favourite_item_provider.dart';
 
 class FavouritePage extends StatefulWidget {
-  FavouritePage ({super.key});
+
+  const FavouritePage ({super.key});
+
   @override
   State<FavouritePage> createState() => _FavouritePageState();
 }
@@ -12,9 +16,13 @@ class FavouritePage extends StatefulWidget {
 class _FavouritePageState extends State<FavouritePage> {
   @override
   Widget build(BuildContext context) {
-    print("Build");
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(leading: IconButton(
+          onPressed: () {
+            Navigator.pushNamed(context, RouteName.cartPage);
+          },
+          icon: const Icon(Icons.shopping_cart, color: Colors.black,),
+        ),),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,7 +40,7 @@ class _FavouritePageState extends State<FavouritePage> {
                         value.addItem(index);
                       }
                     },
-                    leading: Text("Item ${index}"),
+                    leading: Text("${AppText.item}$index"),
                     trailing: IconButton(
                       icon: Icon(value.isContainItem(index)? Icons.favorite: Icons.favorite_border),
                       onPressed: ()
