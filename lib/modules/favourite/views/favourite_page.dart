@@ -1,7 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/services/text/apptext.dart';
+import 'package:flutter_provider/services/utils/colors/app_colors.dart';
+import 'package:flutter_provider/services/utils/text/apptext.dart';
 import 'package:flutter_provider/services/utils/route_name.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +24,7 @@ class _FavouritePageState extends State<FavouritePage> {
           },
           icon: const Icon(
             Icons.shopping_cart,
-            color: Colors.black,
+            color: AppColors.blackColor,
           ),
         ),
       ),

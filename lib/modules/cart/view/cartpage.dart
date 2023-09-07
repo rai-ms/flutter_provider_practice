@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/modules/favourite/provider/favourite_item_provider.dart';
-import 'package:flutter_provider/services/text/apptext.dart';
+import 'package:flutter_provider/services/utils/text/apptext.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatefulWidget {

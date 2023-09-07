@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/components/custom_toast.dart';
 import 'package:flutter_provider/modules/homepage/provider/homepage_slider_provider.dart';
-import 'package:flutter_provider/services/text/apptext.dart';
+import 'package:flutter_provider/services/utils/colors/app_colors.dart';
+import 'package:flutter_provider/services/utils/text/apptext.dart';
 import 'package:flutter_provider/services/utils/route_name.dart';
 import 'package:provider/provider.dart';
 
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: Container(
                           height: 100,
-                          color: Colors.lightBlue.withOpacity(value.value),
+                          color: AppColors.lightBlueWithopacity(value.value),
                           child: const Text(AppText.navToFavPage),
                         ),
                       ),
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         child: Container(
                           height: 100,
-                          color: Colors.yellow.withOpacity(value.value),
+                          color: AppColors.yellowWithopacity(value.value),
                           child: const Text(AppText.navToCartPage),
                         ),
                       ),
