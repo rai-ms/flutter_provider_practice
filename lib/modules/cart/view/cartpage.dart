@@ -26,12 +26,12 @@ class _CartPageState extends State<CartPage> {
                         leading: Text("${AppText.itemNo}${value.itemAt(index) + 1}"),
                         trailing: IconButton(
                         onPressed: () {
-                          value.removeItem(index);
+                          value.removeItem(value.itemAt(index));
                         },
                         icon: const Icon(Icons.favorite),
                       ),
                       onTap: () {
-                      value.removeItem(index);
+                        value.removeItem(value.itemAt(index));
                     },
                   );
                 },
